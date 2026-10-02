@@ -6,17 +6,11 @@ Mobile-first HTML/CSS/JavaScript PWA for the Training Team. The dedicated Supaba
 
 The deployed PWA files are at repository root for GitHub Pages. `Peakopoly_Source.zip` contains the full source project with backend, schema, tests and optional Actions workflow. The separate Admin Access file is private and is never uploaded.
 
-## Publish on GitHub Pages
+## Published app
 
-1. Create a **public** repository called `peakopoly` under `brdlnx-ld` (public repositories support GitHub Pages on GitHub Free).
-2. Upload the contents of this project, preserving `web`, `server`, `supabase`, `tests` and `.github/workflows/pages.yml`. Never upload the separate Admin Access file.
-3. Open repository **Settings → Pages → Source → GitHub Actions**.
-4. Run the **Publish Peakopoly** workflow, or push to `main`.
-5. The expected URL is `https://brdlnx-ld.github.io/peakopoly/`. The config already points at the deployed backend.
+Open https://brdlnx-ld.github.io/peakopoly/ . GitHub Pages is enabled from `main` / root. Upload updated frontend files to the same root to publish changes. Backend updates must be deployed separately to the Supabase Edge Function.
 
-Alternative without Actions: put the contents of `web/` into repository root, including PNG icons and the manifest; set Pages source to `main` / root. Source code can remain in separate folders.
-
-Install on Android using the browser's Install app / Add to Home screen menu; on iPhone use Safari → Share → Add to Home Screen. Installation requires HTTPS. Opening an HTML file directly is not a PWA deployment.
+Install on Android using the browser's Install app / Add to Home screen menu; on iPhone use Safari → Share → Add to Home Screen. The app uses HTTPS.
 
 ## Accounts and launch
 
@@ -89,4 +83,4 @@ Official references: https://supabase.com/docs/guides/functions/pricing and http
 
 22 deterministic engine tests passed. Live deployed checks passed for authentication, authorization, private state, idempotency, atomic concurrent updates, stale Undo rejection, roll/purchase, trade acceptance, lockout, PIN reset and logout. Supabase security advisors returned no warning/error findings (only informational notices for intentionally inaccessible RLS tables with no client policies). Cron responses were verified successful.
 
-Mobile browser visual QA is **not yet completed**: this environment has no installed browser, and the Chromium download was blocked/invalid. The runnable UI test is included so it can be completed after hosting. Do a short dummy-player phone playtest before inviting the Training Team. GitHub Pages publication is also pending repository creation/access.
+Mobile browser visual QA is **not yet completed**: this environment has no installed browser, and the Chromium download was blocked/invalid. The runnable UI test is included so it can be completed after hosting. Do a short dummy-player phone playtest before inviting the Training Team. GitHub Pages publication completed successfully. The live HTTPS login screen, backend player directory and desktop layout were checked. A physical phone playtest is still recommended; the automated 390px browser test has not been completed.
