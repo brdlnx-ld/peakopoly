@@ -12,6 +12,12 @@ Open https://brdlnx-ld.github.io/peakopoly/ . GitHub Pages is enabled from `main
 
 Install on Android using the browser's Install app / Add to Home screen menu; on iPhone use Safari → Share → Add to Home Screen. The app uses HTTPS.
 
+## Sign-up requests
+
+New players can open the app and select **Request to join**, or use https://brdlnx-ld.github.io/peakopoly/#signup . They choose a display name, token and four-digit PIN. PINs are bcrypt hashed immediately; Admin never sees them. Pending players cannot sign in.
+
+Admin opens **More → Admin desk → Join requests**, then approves or rejects each request. Approval atomically creates a player with £1,200 and one roll using their chosen PIN. Requests are rate limited and duplicate approvals are blocked. Account creation through approval cannot be undone; deactivate a player if needed.
+
 ## Accounts and launch
 
 - Admin login credentials are in the **separate private Admin Access file**.
