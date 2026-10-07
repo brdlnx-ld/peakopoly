@@ -2,3 +2,5 @@
 
 /* Approved navy/lime Peakopoly identity */
 header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-image{display:block;width:180px;max-width:100%;height:auto}.welcome-logo{display:block;width:100%;max-width:380px;height:auto;margin:0 auto 20px}@media(min-width:700px){.brand-image{width:210px}}
+
+.board-centre>div{width:100%;padding:24px}.board-logo{display:block;width:100%;max-width:540px;height:auto;margin:14px auto 20px}.board-centre .eyebrow{margin-bottom:12px}
