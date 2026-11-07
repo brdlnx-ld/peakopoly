@@ -24,3 +24,9 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 .rent-team[data-team="red"]{--team:#ff939c}.rent-team[data-team="gold"]{--team:#ffd478}
 .rent-team[data-team] b{color:var(--team)}
 .advent-door{border-left:3px solid var(--mint);padding-left:12px}
+.next-move{border-left:4px solid var(--mint)}
+.next-move h2,.matchday h2{margin-top:5px}
+.next-move p{margin:6px 0 12px}
+#shift-controls{scroll-margin-top:16px}
+.set-offer{display:flex;justify-content:flex-end;margin-top:4px}
+.set-offer button{min-height:44px}
