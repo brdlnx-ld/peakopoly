@@ -5,3 +5,22 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 
 .board-centre>div{width:100%;padding:24px}.board-logo{display:block;width:100%;max-width:540px;height:auto;margin:14px auto 20px}.board-centre .eyebrow{margin-bottom:12px}
 .arcade-link{display:block;color:var(--mint,#b8f36a);text-decoration:none}.arcade-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px}.arcade-icon{font-size:64px;text-align:center}.volume-number{font-size:72px;font-weight:900;color:#c4fa70}.forecast{text-align:center}.container-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:3px;max-width:320px;margin:16px auto;padding:8px;border:3px solid #8ba0b8;background:#0b1526}.parcel{display:block;aspect-ratio:1;background:#1b2b40;border:1px solid #33465d;border-radius:3px}.parcel.filled{background:#b8ef73;border-color:#e0ffb4}.parcel.p2{background:#77d4f7}.parcel.p3{background:#f784c4}.parcel.p4{background:#ffab54}.parcel.p5{background:#f6dc66}.parcel.p6{background:#778fff}.parcel.p7{background:#5dd7d0}.parcel.lane{background:#2a3d53}.parcel-preview{text-align:center}.parcel-preview>div{display:flex;justify-content:center}.parcel-preview .parcel{width:24px;height:24px;margin:1px}.parcel-preview .parcel:not(.filled){visibility:hidden}.parcel-controls{display:grid;grid-template-columns:1fr 2fr 1fr;gap:8px}.parcel-controls button:last-child{grid-column:1/-1}.spinner-animation .arcade-icon{animation:spin 1s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}@media(prefers-reduced-motion:reduce){.spinner-animation .arcade-icon{animation:none}}
+
+/* Event palettes apply to the whole board, while property colours still identify sets. */
+:root[data-campaign-theme="rent"]{--bg:#130e1c;--card:#231729;--muted:#cfbbd5;--ink:#fff4ff;--mint:#ff9299;--line:#5a3249;--event-glow:#76334b;--event-panel:#39243d;--event-button:#40243b}
+:root[data-campaign-theme="prizes"]{--bg:#171306;--card:#252014;--muted:#d8cdb3;--ink:#fff9ea;--mint:#ffd478;--line:#635032;--event-glow:#70501e;--event-panel:#3b2f1c;--event-button:#45351e}
+:root[data-campaign-theme="sale"]{--bg:#160d18;--card:#251829;--muted:#dec7de;--ink:#fff8ff;--mint:#ffbd66;--line:#62404f;--event-glow:#723746;--event-panel:#382239;--event-button:#4b2c42}
+:root[data-campaign-theme="cyber"]{--bg:#071424;--card:#112437;--muted:#b6cce3;--ink:#f3fbff;--mint:#71f5f0;--line:#31596a;--event-glow:#236c81;--event-panel:#162e50;--event-button:#203e59}
+:root[data-campaign-theme="advent"]{--bg:#091b18;--card:#132b25;--muted:#bed5c8;--ink:#f7fff9;--mint:#f9d587;--line:#3c6354;--event-glow:#85404b;--event-panel:#214439;--event-button:#294d40}
+:root[data-campaign-theme] body{background:radial-gradient(ellipse at top,var(--event-panel),var(--bg) 440px)}
+:root[data-campaign-theme] .campaign-hero{border-top:3px solid var(--mint);background:linear-gradient(115deg,var(--event-panel,#223d50),var(--card))}
+:root[data-campaign-theme] .campaign-hero h2{font-size:clamp(22px,5vw,30px)}
+:root[data-campaign-theme] .hero{background:linear-gradient(135deg,var(--event-panel,#223d50),var(--card));border-color:var(--line)}
+:root[data-campaign-theme] .board-centre{background:radial-gradient(ellipse,var(--event-panel,#254450),var(--bg))}
+:root[data-campaign-theme] :is(nav,dialog,.metric){background:var(--card)}
+:root[data-campaign-theme] button:not(.primary):not(.space):not(.active):not(.danger):not(.secondary):not(.close){background:var(--event-button,#243755)}
+:root[data-campaign-theme] main a{color:var(--mint)}
+.rent-team[data-team]{--team:#a0bdfc;border:1px solid var(--line);border-left:4px solid var(--team);border-radius:12px;padding:12px;margin:8px 0}
+.rent-team[data-team="red"]{--team:#ff939c}.rent-team[data-team="gold"]{--team:#ffd478}
+.rent-team[data-team] b{color:var(--team)}
+.advent-door{border-left:3px solid var(--mint);padding-left:12px}
