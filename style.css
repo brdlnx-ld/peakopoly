@@ -30,3 +30,14 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 #shift-controls{scroll-margin-top:16px}
 .set-offer{display:flex;justify-content:flex-end;margin-top:4px}
 .set-offer button{min-height:44px}
+
+/* Finance override: colour offsets and a static scanline texture. */
+:root[data-campaign-theme="sale"]{--bg:#10091b;--card:#201331;--ink:#fffaff;--muted:#e1cdee;--mint:#83f5ed;--line:#765486;--event-glow:#781768;--event-panel:#321744;--event-button:#4c235a}
+:root[data-campaign-theme="sale"] main h1,.liquidation h1{text-shadow:2px 1px #ed439d,-2px -1px #00bac6}
+:root[data-campaign-theme="sale"] .campaign-hero,.liquidation.hero{border:2px solid var(--mint);background-image:repeating-linear-gradient(0deg,transparent 0 5px,#ba81d015 5px 6px),linear-gradient(135deg,#30164b,#171125)}
+.liquidation .actions{gap:8px;flex-wrap:wrap}
+.liquidation button{min-height:44px}
+@media(prefers-reduced-motion:no-preference){
+ :root[data-campaign-theme="sale"] .liquidation.hero h1{animation:finance-glitch 450ms steps(3,end) 1}
+}
+@keyframes finance-glitch{35%{text-shadow:4px 1px #ed439d,-4px -1px #00bac6}70%{text-shadow:-3px 1px #ed439d,3px -1px #00bac6}}
