@@ -60,3 +60,11 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 @keyframes scanner-light{0%,100%{opacity:.15}10%,90%{opacity:1;outline:2px solid white}}
 .pad-0{background:#9b3451;color:white}.pad-1{background:#205e9d;color:white}.pad-2{background:#326144;color:white}.pad-3{background:#71541b;color:white}
 @media(prefers-reduced-motion:reduce){.moving-parcel{animation:none;position:static;display:inline-block;margin:24px 8px}.scanner-cue{animation:none;opacity:1}}
+
+.multi-belt{height:154px}
+.belt-shipment{position:absolute;padding:5px 8px;border-radius:7px;background:#273b52;border:1px solid var(--line);font-size:12px;white-space:nowrap;pointer-events:none}
+.belt-shipment[hidden]{display:none}
+.head-shipment{background:#16483f;border:2px solid #a2f8d8;color:#fff;font-weight:700;z-index:2}
+.scanner-cue{opacity:0;animation-fill-mode:both}
+@keyframes scanner-light{0%,100%{opacity:0}10%,90%{opacity:1;outline:2px solid white}}
+@media(prefers-reduced-motion:reduce){.scanner-cue{opacity:0;animation:scanner-light 700ms 1;animation-fill-mode:both}}
