@@ -41,3 +41,22 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
  :root[data-campaign-theme="sale"] .liquidation.hero h1{animation:finance-glitch 450ms steps(3,end) 1}
 }
 @keyframes finance-glitch{35%{text-shadow:4px 1px #ed439d,-4px -1px #00bac6}70%{text-shadow:-3px 1px #ed439d,3px -1px #00bac6}}
+
+.finance-signal{border:1px solid #82efe1;border-left:4px solid #e77dbf;background:#20182e;color:#e8fff9;padding:12px;margin-bottom:16px;font-family:monospace;line-height:1.6}
+:root[data-finance-glitch] main h1{text-shadow:1px 0 #ea63b3,-1px 0 #67e6ed}
+:root[data-finance-glitch="high"]{--bg:#110f20;--line:#705576;--mint:#8de9e6}
+:root[data-finance-glitch="high"] .card{box-shadow:2px 0 #c364a533,-2px 0 #63cfdd33}
+:root[data-finance-glitch="high"] .finance-signal{background-image:repeating-linear-gradient(0deg,transparent 0 5px,#cb8ee012 5px 6px)}
+@media(prefers-reduced-motion:no-preference){:root[data-finance-glitch] .finance-signal{animation:finance-glitch 450ms steps(3,end) 1}}
+
+.cyber-game{overflow:hidden}
+.cyber-pads{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:16px 0}
+.cyber-pads button{min-height:58px;white-space:normal}
+.parcel-track{position:relative;height:76px;overflow:hidden;background:repeating-linear-gradient(90deg,#24364a 0 20px,#172535 20px 22px);border:1px solid var(--line);border-radius:12px}
+.moving-parcel{position:absolute;top:25px;left:0;white-space:nowrap;padding:3px 8px;background:var(--card);animation:parcel-travel var(--travel) linear forwards}
+@keyframes parcel-travel{from{left:0;transform:translateX(0)}to{left:100%;transform:translateX(-100%)}}
+.scanner-sequence{display:flex;flex-wrap:wrap;gap:6px;min-height:70px;margin:12px 0}
+.scanner-cue{display:inline-grid;place-items:center;width:36px;height:48px;opacity:.15;animation:scanner-light 700ms 1}
+@keyframes scanner-light{0%,100%{opacity:.15}10%,90%{opacity:1;outline:2px solid white}}
+.pad-0{background:#9b3451;color:white}.pad-1{background:#205e9d;color:white}.pad-2{background:#326144;color:white}.pad-3{background:#71541b;color:white}
+@media(prefers-reduced-motion:reduce){.moving-parcel{animation:none;position:static;display:inline-block;margin:24px 8px}.scanner-cue{animation:none;opacity:1}}
