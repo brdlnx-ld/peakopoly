@@ -68,3 +68,9 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 .scanner-cue{opacity:0;animation-fill-mode:both}
 @keyframes scanner-light{0%,100%{opacity:0}10%,90%{opacity:1;outline:2px solid white}}
 @media(prefers-reduced-motion:reduce){.scanner-cue{opacity:0;animation:scanner-light 700ms 1;animation-fill-mode:both}}
+
+.advent-chaos{border:1px solid #da91bb}
+.advent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:16px 0}
+.advent-tile{display:flex;flex-direction:column;gap:8px;padding:12px 8px;border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
+.advent-tile.opened{border-color:var(--mint)}
+#advent-preview select{max-width:100%}
