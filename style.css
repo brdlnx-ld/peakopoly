@@ -74,3 +74,11 @@ header{padding-top:10px;padding-bottom:10px;gap:16px}.brand{min-width:0}.brand-i
 .advent-tile{display:flex;flex-direction:column;gap:8px;padding:12px 8px;border:1px solid var(--line);border-radius:10px;overflow-wrap:anywhere}
 .advent-tile.opened{border-color:var(--mint)}
 #advent-preview select{max-width:100%}
+
+.family-panel{background:linear-gradient(145deg,#25191c,#111a17);border:1px solid #94714b;color:#f8eee0}
+.family-panel h1{color:#e6b76f;text-shadow:2px 1px #602d29}
+.family-panel .eyebrow{color:#d3ad76;letter-spacing:.15em}
+.family-panel p{line-height:1.65}
+.family-link{display:block;color:#edc48a;border-left:4px solid #b47c4b}
+.family-panel .actions{flex-wrap:wrap;gap:8px}
+.family-panel select{max-width:100%}
